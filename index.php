@@ -13,6 +13,10 @@
     <!-- Formulário para entrada dos dados -->
     <form method="POST">
 
+        <label>Nome:</label><br>
+        <input type="name" name="nome" required>
+        <br>
+
         <!-- Campo para informar o e-mail -->
         <label>E-mail:</label><br>
         <input type="email" name="email" required>
