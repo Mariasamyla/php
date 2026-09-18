@@ -8,10 +8,6 @@
  <h1>Dados do Cliente</h1>
  <!-- Formulário para entrada dos dados -->
  <form method="POST">
-  <label>Nome:</label><br>
-        <input type="name" name="nome" required>
-         <br>
-
  <label>E-mail:</label><br>
  <input type="email" name="email" required>
  <br><br>
