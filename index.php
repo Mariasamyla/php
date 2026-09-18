@@ -26,14 +26,26 @@
 
         <button type="submit">Cadastrar</button>
 
-    <?php
+   <?php
+      // Verifica se o formulário foi enviado
+       if ($_SERVER["REQUEST_METHOD"] == "POST") {
+       
+          $email = $_POST["email"]; // Recebe o e-mail enviado pelo formulário
+       
+       $databaseUrl = getenv("DATABASE_URL"); // Obtém a conexão configurada no Render
+     
+        $conexao = pg_connect($databaseUrl); // Conecta ao PostgreSQL
+       
+       pg_query_params( // Salva o e-mail no banco
+       $conexao,
+       "INSERT INTO usuarios (email) VALUES ($1)",
+         array($email)
+);
+      // Mostra a confirmação
+         echo "Cadastro realizado com sucesso!"; 
+}
+     ?>
 
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $email = $_POST["email"];
-        echo "E-mail recebido: " . $email;
-    }
-    ?>
 
 </body>
 
