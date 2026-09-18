@@ -25,6 +25,7 @@
 
 
         <button type="submit">Cadastrar</button>
+        </form>
 
    <?php
       // Verifica se o formulário foi enviado
